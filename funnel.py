@@ -25,15 +25,13 @@ def checkFile(nameFile):
         return True
     except Exception, e:
         return False
-
-
+    
 def getSizeOfFile(pathFile):
     file = open(pathFile)
     file.seek(0,2)
     size = file.tell()
     file.close()
     return size
-
 
 def getIP(country="BO", nic="lacnic",ipv="ipv4",convert=False):
         sizeOfFile = getSizeOfFile("data/"+str(nic))
@@ -56,7 +54,6 @@ def getIP(country="BO", nic="lacnic",ipv="ipv4",convert=False):
         else:
             print "[-] Check the file, maybe something is wrong :("
    
-
 def main():
     banner()
     Des = "Gathering global IP data tool  :)"
